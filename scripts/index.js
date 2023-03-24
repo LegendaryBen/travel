@@ -51,7 +51,7 @@ function moveRight(){
 function moveLeft(){
     section9.scrollBy({
         top:0,
-        left:-300,
+        left:-450,
         behavior:"smooth"
     })
 }
