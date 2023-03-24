@@ -854,6 +854,10 @@ footer>div:last-child{
         height:37px;width:37px;
     }
 
+    .section-9{
+        overflow: auto;
+    }
+
     .section-9>div{
         min-width:400px;background-color:white;height:230px;margin-right:40px;border-radius: 6px;padding:17px;
         font-family:'Montserrat';font-style: normal;
