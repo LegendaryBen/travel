@@ -451,4 +451,8 @@ footer>div:last-child{
         padding:0px 20px;
     }
 
+    .sec1-second{
+        left:90%;opacity:0;
+    }
+
 }
