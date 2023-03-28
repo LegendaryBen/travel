@@ -20,7 +20,6 @@ let sec1_first = query(".sec1-first");
 let sec2_first = query(".sec1-second");
 let back = query(".back");
 let submit = query(".submit");
-let span = query(".span");
 let warn = query(".warning");
 let ham = query(".ham");
 let menu = query(".ham-menu");
@@ -37,17 +36,13 @@ let marital = query(".marital");
 let occupation = query(".occupation");
 let passport = query(".passport");
 let issue = query(".issue");
-let nin = query(".nin");
 let country1 = query(".country1");
 let expire = query(".expire");
 let choice = query(".choice");
 
 
-
-
 listener(slideOut,"click",moveLeft)
 listener(slideIn,"click",back);
-listener(hideDiv,"click",span);
 listener(show,"click",ham);
 listener(hide,"click",cancle);
 listener(addName,"change",first_name);
@@ -62,7 +57,6 @@ listener(addMarital,"change",marital)
 listener(addOccupation,"change",occupation);
 listener(addPass,"change",passport);
 listener(addIssue,"change",issue);
-listener(addNin,"change",nin);
 listener(addCountry1,"change",country1);
 listener(addExpire,"change",expire);
 listener(addChoice,"change",choice);
@@ -99,11 +93,11 @@ function showDocs(){
 
 function changeImg(e){
     let obj = e.target.files[0];
-    if(obj.type == "image/jpeg" ||obj.type == "image/png"){
+    if(obj.type == "image/jpeg"){
         preview.src = URL.createObjectURL(obj);
         img.style.opacity = "1";
     }else{
-        alert("FILE NOT SUPPORTED!!!. SELECT A JPEG OR PNG IMAGE FILE")
+        alert("FILE NOT SUPPORTED!!!. SELECT A JPEG  IMAGE FILE")
         img.style.opacity = "0";
     }
 }
@@ -118,9 +112,6 @@ function setValues(){
 
     let expire1 = localStorage.getItem("expire")||"";
     expire.value = expire1;
-
-    let nin1 = localStorage.getItem("nin")||"";
-    nin.value = nin1;
 
     let issue1 = localStorage.getItem("issue")||"";
     issue.value = issue1;

@@ -78,62 +78,68 @@
         <a class="sec1-second">2</a>
         </div>
     </div>
+
+    <?php if(isset($_GET['error'])){ ?>
+
     <div class="warning">
         <div>
-            Warning! This site is very sensitive and only for the owner of this application
+            <?php echo stripslashes( htmlentities($_GET['error'] ) ) ; ?>
             <span class="span">&#88;</span>
         </div>
     </div>
+
+    <?php } ?>
+
     <div class="form-container">
-        <form action="">
+        <form action="submit.php" method="post" enctype="multipart/form-data">
             <div class="form-first">
                 <div>
                     <div class="form-first1">
                         <div class="divs">
                             <label>First name</label><br><br>
-                            <input type="text" name="" id="" placeholder=" Name" class="first-name">
+                            <input type="text" name="first_name" id="" placeholder=" Name" class="first-name">
                         </div>
                         <div class="divs">
                             <label>Nationality</label><br><br>
-                            <input type="text" name="" id="" placeholder="e.g Finnish " class="nationality">
+                            <input type="text" name="nationality" id="" placeholder="e.g Finnish " class="nationality">
                         </div>
                         <div class="divs">
                             <label>Date of birth</label><br><br>
-                            <input type="text" name="" id="" placeholder="DD / MM / YY " class="birth">
+                            <input type="text" name="date_of_birth" id="" placeholder="DD / MM / YY " class="birth">
                         </div>
                         <div class="divs">
                             <label>Language</label><br><br>
-                            <input type="text" name="" id="" placeholder="e.g English" class="language">
+                            <input type="text" name="langu" id="" placeholder="e.g English" class="language">
                         </div>
                         <div class="divs">
                             <label>Phone number</label><br><br>
-                            <input type="text" name="" id="" placeholder="Phone number" class="phone">
+                            <input type="text" name="phone" id="" placeholder="Phone number" class="phone">
                         </div>
                     </div>
                     <div class="form-first2">
                         <div class="divs">
                             <label>Last name</label><br><br>
-                            <input type="text" name="" id="" placeholder="Surname" class="last-name">
+                            <input type="text" name="last_name" id="" placeholder="Surname" class="last-name">
                         </div>
                         <div class="divs">
                             <label>Country of residence</label><br><br>
-                            <input type="text" name="" id="" placeholder="country" class="country">
+                            <input type="text" name="country_of_residence" id="" placeholder="country" class="country">
                         </div>
                         <div class="divs">
                             <label>Sex</label><br><br>
-                            <input type="text" name="" id="" placeholder="e.g Male" class="sex">
+                            <input type="text" name="sex" id="" placeholder="e.g Male" class="sex">
                         </div>
                         <div class="divs">
                             <label>Marital status</label><br><br>
-                            <input type="text" name="" id="" placeholder="e.g Single" class="marital">
+                            <input type="text" name="marital_status" id="" placeholder="e.g Single" class="marital">
                         </div>
                         <div class="divs">
                             <label>Occupation</label><br><br>
-                            <input type="text" name="" id="" placeholder="e.g Farmer" class="occupation">
+                            <input type="text" name="occupation" id="" placeholder="e.g Farmer" class="occupation">
                         </div>
                         <div class="divs">
                             <label>Visa Type</label><br><br>
-                            <select name="">
+                            <select name="visa">
                                 <option value="study">Study Visa</option>
                                 <option value="transit">Transit Visa</option>
                                 <option value="travel">Travel Visa</option>
@@ -146,21 +152,17 @@
                     <div class="form-first1">
                         <div class="divs">
                             <label>Passport number</label><br><br>
-                            <input type="text" name="" id="" placeholder="e.g 0122398436" class="passport">
+                            <input type="text" name="passport_number" id="" placeholder="e.g 0122398436" class="passport">
                         </div>
                         <div class="divs">
                             <label>Issue date</label><br><br>
-                            <input type="text" name="" id="" placeholder="MM / YY" class="issue">
-                        </div>
-                        <div class="divs">
-                            <label>National Identity number</label><br><br>
-                            <input type="text" name="" id="" placeholder="e.g 0122398436" class="nin">
+                            <input type="text" name="issue_date" id="" placeholder="MM / YY" class="issue">
                         </div>
                         <div class="img-text">
                             Please upload a passport photograph
                         </div>
                         <div class="main-img">
-                            <input type="file" name="" id="" class="file">
+                            <input type="file" name="pass" id="" class="file">
                             <div>Upload Image</div>
                             <div class="show-img">
                                 <img  alt="" class="prev">
@@ -170,19 +172,19 @@
                     <div class="form-first2">
                         <div class="divs">
                             <label>Country of issue</label><br><br>
-                            <input type="text" name="" id="" placeholder="country of issue" class="country1">
+                            <input type="text" name="country_of_issue" id="" placeholder="country of issue" class="country1">
                         </div>
                         <div class="divs">
                             <label>Expiry date</label><br><br>
-                            <input type="text" name="" id="" placeholder="MM / YY" class="expire">
+                            <input type="text" name="expiry_date" id="" placeholder="MM / YY" class="expire">
                         </div>
                         <div class="divs">
                             <label>Country of choice</label><br><br>
-                            <input type="text" name="" id="" placeholder="e.g Germany" class="choice">
+                            <input type="text" name="country_of_choice" id="" placeholder="e.g Germany" class="choice">
                         </div>
                         <div class="divs docs">
                             <label>Upload Document</label><br><br>
-                            <input type="file" name="" class="pdf">
+                            <input type="file" name="doc" class="pdf">
                             <div class="doc-text">
                                 <span>Upload Document</span>
                             </div>
@@ -190,7 +192,6 @@
                                 birth.pdf
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -206,7 +207,7 @@
                     </a>
                 </div>
                 <div>
-                    <input type="submit" name="" value="submit" class="submit">
+                    <input type="submit" name="submit" value="submit" class="submit">
                 </div>
             </div>
         </form>
@@ -226,5 +227,21 @@
         </div>
     </footer>
     <script src="scripts/apply.js"></script>
+
+    <?php if(isset($_GET['error'])){ ?>
+    <script>
+        function query(a){
+            return document.querySelector(a);
+        }
+
+        function listener(funcName,funcType,funcElement){
+            funcElement.addEventListener(funcType,funcName);
+        }
+
+        let span1 = query(".span");
+        listener(hideDiv,"click",span1);
+    </script>
+     <?php } ?>
+
 </body>
 </html>
