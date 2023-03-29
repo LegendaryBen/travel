@@ -15,7 +15,7 @@ if(isset($_POST['submit'])){
     $marital =  htmlentities(trim($_POST['marital_status']));
     $occupation = htmlentities(trim($_POST['occupation']));
     $visa =  htmlentities(trim($_POST['visa']));
-    $status = "active";
+    $status = "pending";
     $percentage = "0";
     $passport_number = htmlentities(trim( $_POST['passport_number']));
     $issue_date = htmlentities(trim($_POST['issue_date']));

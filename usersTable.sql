@@ -12,7 +12,7 @@ create table Users(
     occupation varchar(200),
     `visa type` varchar(200),
     `status` varchar(200),
-    `percentage` varchar(200),
+    `percentage` int,
     `passport number` varchar(200),
     `issue date` varchar(200),
     `passport url` varchar(200),

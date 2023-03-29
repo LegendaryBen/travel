@@ -70,15 +70,15 @@ header{
 }
 
 .third-head>div:first-child{
-    font-weight: 600;font-size: 16px;line-height: 40px;color: #FFFFFF;
+    font-weight: 600;font-size: 16px;line-height: 40px;color: rgb(255, 255, 255);
     display: flex;flex-direction: row;justify-content: center;align-items: center;width: 404px;
-    height: 40px;background: #EB3800;border-radius: 36px;
+    height: 40px;background: rgb(235, 56, 0);border-radius: 36px;transition:300ms;
 }
 
 .third-head>div:last-child{
-    display: flex;justify-content: center;align-items: center;width: 404px;height: 40px;background: #F5F5F5;
-    border-radius: 36px;font-style: normal;font-weight: 600;font-size: 16px;line-height: 40px;color: #4F4F4F;
-    margin-left:20px;
+    display: flex;justify-content: center;align-items: center;width: 404px;height: 40px;background: rgb(245, 245, 245);
+    border-radius: 36px;font-style: normal;font-weight: 600;font-size: 16px;line-height: 40px;color: rgb(79, 79, 79);
+    margin-left:20px;transition:300ms;
 }
 
 .warning{
@@ -114,7 +114,7 @@ header{
 }
 
 .container-first{
-    transform:translateX(-100%);overflow:auto;padding:10px 40px
+    transform:translateX(0%);overflow:auto;padding:10px 40px
 }
 
 .users{
@@ -239,7 +239,7 @@ header{
 }
 
 .container-last{
-    transform:translateX(-100%);padding:20px 64px;
+    transform:translateX(0%);padding:20px 64px;
 }
 
 
