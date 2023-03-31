@@ -80,24 +80,28 @@
          What did you apply for? <span> (required)</span>
        </div>
     </div>
+
+    <?php if(isset($_GET['error'])){?>
     <div class="warning">
         <div>
-            Warning! This site is very sensitive and only for the owner of this application
+            <?php echo htmlentities($_GET['error'])?>
             <span class="span">&times;</span>
         </div>
     </div>
-    <form action="">
+    <?php } ?>
+
+    <form action="user.php" method="post">
         <img src="images/up-select.svg" alt="" class="img1">
         <img src="images/down-select.svg" alt="" class="img2">
         <label for="">Visa type</label><br>
-        <select name="">
+        <select name="visa">
             <option value="study">Study Visa</option>
             <option value="transit">Transit Visa</option>
             <option value="travel">Travel Visa</option>
             <option value="work">Work Visa</option>
         </select>
-        <input type="text" name="" id="" placeholder="Enter your application ID here..." class="input">
-        <input type="submit" value="submit" name="" class="submit">
+        <input type="text" name="id" id="" placeholder="Enter your application ID here..." class="input">
+        <input type="submit" value="submit" name="submit" class="submit">
     </form>
     <footer>
         <div>
@@ -114,6 +118,10 @@
         </div>
     </footer>
     <script src="scripts/error.js"></script>
+
+    <?php if(isset($_GET['error'])){?>
     <script src="scripts/close1.js"></script>
+    <?php }?>
+
 </body>
 </html>

@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
     $country_of_choice =htmlentities(trim( $_POST['country_of_choice']));
     $application_id = "empty";
     $document_url =  htmlentities(trim($_FILES['doc']['name']));
-    $service_agent = "Mr John Emmanuel";
+    $service_agent = "George Dennis";
 
     if(empty($first_name)||empty($last_name)||empty($nationality)||empty($dob)||empty($lang)||empty($phone)||empty($cor)||empty($sex)||empty($marital)||empty($occupation)||empty($visa)||empty($passport_number)||empty($issue_date)||empty($passport_url)||empty($country_of_issue)||empty($expiry)||empty($country_of_choice)||empty($document_url)){
         header("location:apply.php?error=some inputs fields are empty, check properly!");

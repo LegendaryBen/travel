@@ -1,3 +1,41 @@
+<?php
+require "dbconnection.php";
+
+if(isset($_POST['submit'])){
+
+    $visa = htmlentities(trim($_POST['visa']));
+    $id =  htmlentities(trim($_POST['id']));
+
+    if(empty($visa)||empty($id)){
+        header("location:status.php?error=some input fields where empty, check properly!");
+        exit;
+    }
+
+    $sql = "select * from users where `application id` =? and `visa type` = ? ";
+
+    $stmt = mysqli_prepare($connection,$sql);
+
+    mysqli_stmt_bind_param($stmt,"ss",$id,$visa);
+    mysqli_stmt_execute($stmt);
+
+    $final = mysqli_stmt_get_result($stmt);
+    $result2 = mysqli_fetch_all($final,MYSQLI_ASSOC);
+
+    if(empty($result2)){
+        header("location:status.php?error=user not found, check your id properly!");
+        exit;
+    }
+
+}else{
+
+    header("location:status.php");
+    exit;
+}
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,10 +103,10 @@
     </div>
     <div class="section2">
         <div>
-            <img src="images/study1.svg" alt="">
+            <img src="<?php echo $result2[0]['passport url']?>" alt="">
             <div class="details">
-                <div>Benjamin Chimaobi</div>
-                <div>Visa Type : Study Visa</div>
+                <div> <?php echo $result2[0]['first_name']." ".$result2[0]['last_name']?> </div>
+                <div>Visa Type : <?php echo $result2[0]['visa type']?> visa</div>
             </div>
         </div>
     </div>
@@ -91,7 +129,7 @@
                         Surname:
                     </span>
                     <span>
-                        Benjamin
+                        <?php echo $result2[0]['first_name']?>
                     </span>
                 </div>
                 <div class="information">
@@ -99,7 +137,7 @@
                         First name:
                     </span>
                     <span>
-                        Benjamin
+                    <?php echo $result2[0]['last_name']?>
                     </span>
                 </div>
                 <div class="information">
@@ -107,7 +145,7 @@
                         Nationality:
                     </span>
                     <span>
-                        Benjamin
+                    <?php echo $result2[0]['nationality']?>
                     </span>
                 </div>
                 <div class="information">
@@ -115,7 +153,7 @@
                         Passport number:
                     </span>
                     <span>
-                        Benjamin
+                    <?php echo $result2[0]['passport number']?>
                     </span>
                 </div>
                 <div class="information">
@@ -123,7 +161,7 @@
                         D.O.B:
                     </span>
                     <span>
-                        Benjamin
+                    <?php echo $result2[0]['date_of_birth']?>
                     </span>
                 </div>
                 <div class="information">
@@ -131,7 +169,7 @@
                         Phone number:
                     </span>
                     <span>
-                        Benjamin
+                    <?php echo $result2[0]['phone']?>
                     </span>
                 </div>
                 <div class="information">
@@ -139,7 +177,7 @@
                         Application ID:
                     </span>
                     <span>
-                        Benjamin
+                    <?php echo $result2[0]['application id']?>
                     </span>
                 </div>
                 <div class="information">
@@ -147,7 +185,7 @@
                         Service agent:
                     </span>
                     <span>
-                        Benjamin
+                    <?php echo $result2[0]['service agent']?>
                     </span>
                 </div>
                 <div class="last">
@@ -155,7 +193,7 @@
                         Status:
                     </span>
                     <span>
-                        active
+                    <?php echo $result2[0]['status']?>
                     </span> 
                 </div>
             </div>
@@ -163,9 +201,9 @@
     </div>
     <div class="loader">
         <div>
-            <div class="load">
-                <div>
-                    30%
+            <div class="load" style="width:<?php echo $result2[0]['percentage']."%"?>">
+                <div >
+                <?php echo $result2[0]['percentage']."%"?>
                 </div>
             </div>
         </div>

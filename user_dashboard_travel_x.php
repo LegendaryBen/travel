@@ -56,7 +56,7 @@ $result2 =  mysqli_fetch_all($final2,MYSQLI_ASSOC);
                 <img src="images/newT.svg" alt="">
                 <span>Travelx</span>
             </div>
-            <a href="#"><span>Clich here to go to website's Home page</span><img src="images/at.svg"></a>
+            <a href="index.php"><span>Clich here to go to website's Home page</span><img src="images/at.svg"></a>
         </div>
         <div class="second-head">
             <div class="dashboard">
@@ -117,7 +117,7 @@ $result2 =  mysqli_fetch_all($final2,MYSQLI_ASSOC);
                     <div class="visa">Visa type: <?php echo $key['visa type']?></div>
                 </div>
                 <div class="edit">
-                    <a href="edit.php?num=<?php echo $key["id"];?>"><img src="images/edit.svg" alt=""></a>
+                    <a href="edit.php?nums=<?php echo $key["id"];?>"><img src="images/edit.svg" alt=""></a>
                     <a href="download.php?check=<?php echo $key["document url"];?>" class="download">download</a>
                 </div>
             </div>
@@ -165,16 +165,16 @@ $result2 =  mysqli_fetch_all($final2,MYSQLI_ASSOC);
                     <img src=" <?php echo $key2['passport url'];?> " alt="">
                 </div>
                 <div>
-                    <div class="name"><?php echo $key2['first_name']." ".$key['last_name']?></div>
+                    <div class="name"><?php echo $key2['first_name']." ".$key2['last_name']?></div>
                     <div class="visa">Visa type: <?php echo $key2['visa type']?></div>
                 </div>
                 <div class="edit">
-                    <a href="edit.php?num=<?php echo $key2["id"];?>"><img src="images/edit.svg" alt=""></a>
+                    <a href="edit.php?nums=<?php echo $key2["id"];?>"><img src="images/edit.svg" alt=""></a>
                 </div>
             </div>
             <div class="u-second">
                 <div style="background-color: #EB3800;">
-                    <a href="generate.php?num=<?php echo $key2["id"];?>" style="color:white;text-decoration:none;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 12px;">Generate id</a>
+                    <a href="generate.php?num=<?php echo $key2["id"];?>" style="color:white;text-decoration:none;font-family: 'Montserrat';font-style: normal;font-weight: 600;font-size: 12px;display:flex;justify-content:center;align-items:center;width:100%;height">Generate id</a>
                 </div>
             </div>
             <div class="u-third">

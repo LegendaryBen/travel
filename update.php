@@ -22,7 +22,13 @@ if(isset($_POST['save'])){
     $sql = "update users set `percentage` = ? where `id` = ?";
     $stmt = mysqli_prepare($connection,$sql);
     mysqli_stmt_bind_param($stmt,"ii",$text,$id);
-    mysqli_stmt_execute($stmt);
+    $check = mysqli_stmt_execute($stmt);
+
+    if(!$check){
+        header("location:error.php");
+        exit;
+    }
+
     header("location:user_dashboard_travel_x.php");
     exit;
 }else{
