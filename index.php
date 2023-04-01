@@ -19,23 +19,23 @@
         </div>
         <div class="clicks">
             <div>
-                <a href="#">Home</a>
+                <a>Home</a>
             </div>
             <div>
-                <a href="#">Visas</a>
+                <a href="#visas">Visas</a>
             </div>
             <div>
-                <a href="#">Application Status</a>
+                <a href="status.php">Application Status</a>
             </div>
             <div>
-                <a href="#">About Us</a>
+                <a href="about.php">About Us</a>
             </div>
             <div>
-                <a href="#">Contact</a>
+                <a href="">Contact</a>
             </div>
         </div>
         <div class="clicks2">
-            <a href="#" class="third">Apply Now</a>
+            <a href="apply.php" class="third">Apply Now</a>
         </div>
     </div>
     <div class="section-1">
@@ -91,35 +91,35 @@
         <div class="nav">
             <header>
                 <div class="first">
-                    <a href="#">
+                    <a>
                         <img alt="" class="log">
                         <div>Travel x</div>
                     </a>
                 </div>
                 <div class="second">
-                    <a href="#">Home</a>
-                    <a href="#">Visas</a>
-                    <a href="#">
+                    <a>Home</a>
+                    <a href="#visas">Visas</a>
+                    <a href="status.php">
                         <div>Application</div>
                         <div>Status</div>
                     </a>
-                    <a href="#">About Us</a>
+                    <a href="about.php">About Us</a>
                     <a href="#">Contact</a>
                 </div>
                 <div>
-                    <a href="" class="third toggle">Apply Now</a>
+                    <a href="apply.php" class="third toggle">Apply Now</a>
                     <img  alt="" class="ham"> 
                 </div>
             </header>
             <div class="icons">
                 <div>
-                    <a href="">
+                    <a>
                         <img  alt="" class="fb">
                     </a>
-                    <a href="">
+                    <a>
                         <img  alt="" class="tw">
                     </a>
-                    <a href="">
+                    <a>
                         <img  alt="" class="ig2">
                     </a>
                 </div>
@@ -335,7 +335,7 @@
                 </div>
             </div>
             <div>
-                <a href="#">Apply Now</a>
+                <a href="apply.php" style="display:flex;justify-content:center;align-items:center;width:100%;height:100%;">Apply Now</a>
             </div>
         </div>
         <div class="sec6-last">
@@ -354,7 +354,7 @@
             </div>
         </div>
     </div>
-    <div class="section-7">
+    <div class="section-7" id="visas">
         <div>
             <img alt="" class="school">
             <div>
@@ -366,7 +366,7 @@
                 serves as a Student Visa for the<br>
                  duration of your stay.
             </div>
-            <a href="#">Read More</a>
+            <a href="visa3.php">Read More</a>
         </div>
         <div>
             <img  alt="" class="work">
@@ -379,7 +379,7 @@
                 that country for a specific time<br>
                 period.
             </div>
-            <a href="#">Read More</a>
+            <a href="visa2.php">Read More</a>
         </div>
         <div>
             <img  alt="" class="visit">
@@ -392,7 +392,7 @@
                 in a country for a limited period<br>
                 of time, usually for tourism. 
             </div>
-            <a href="#">Read More</a>
+            <a href="visa4.php">Read More</a>
         </div>
         <div>
             <img  alt="" class="transit">
@@ -405,7 +405,7 @@
                 the territory of a country en<br>
                 route to a final destination...
             </div>
-            <a href="#">Read More</a>
+            <a href="visa.php">Read More</a>
         </div>
     </div>
     <div class="section-8">
@@ -507,9 +507,9 @@
             <span>Travelx</span>
         </div>
         <div>
-            <a href="#">Visas</a>
-            <a href="#">Apply Now</a>
-            <a href="#">Check Application Status</a>
+            <a href="#visas">Visas</a>
+            <a href="apply.php">Apply Now</a>
+            <a href="status.php">Check Application Status</a>
             <a href="#">Contact</a>
         </div>
         <div>
@@ -517,7 +517,7 @@
         </div>
     </footer>
     <div class="clicks2 mad-style">
-        <a href="#" class="third">Apply Now</a>
+        <a href="apply.php" class="third">Apply Now</a>
     </div>
     <script src="scripts/index.js"></script>
 </body>

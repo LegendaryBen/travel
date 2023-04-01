@@ -19,44 +19,44 @@
         </div>
         <div class="clicks">
             <div>
-                <a href="#">Home</a>
+                <a href="index.php">Home</a>
             </div>
             <div>
-                <a href="#">Visas</a>
+                <a href="index.php#visas">Visas</a>
             </div>
             <div>
-                <a href="#">Application Status</a>
+                <a href="status.php">Application Status</a>
             </div>
             <div>
-                <a href="#">About Us</a>
+                <a href="about.php">About Us</a>
             </div>
             <div>
                 <a href="#">Contact</a>
             </div>
         </div>
         <div class="clicks2">
-            <a class="third">Apply Now</a>
+            <a class="third" href="apply.php">Apply Now</a>
         </div>
     </div>
     <header>
         <div class="first">
-            <a href="#">
+            <a href="index.php">
                 <img src="images/logo.svg" alt="" class="log">
                 <div>Travel x</div>
             </a>
         </div>
         <div class="second">
-            <a href="#">Home</a>
-            <a href="#">Visas</a>
-            <a href="#">
+            <a href="index.php">Home</a>
+            <a href="index.php#visas">Visas</a>
+            <a href="status.php">
                 <div>Application</div>
                 <div>Status</div>
             </a>
-            <a href="#">About Us</a>
+            <a href="about.php">About Us</a>
             <a href="#">Contact</a>
         </div>
         <div>
-            <a  class="third toggle">Apply Now</a>
+            <a  class="third toggle" href="apply.php">Apply Now</a>
             <img src="images/black-ham.svg"  alt="" class="ham"> 
         </div>
     </header> 
@@ -76,16 +76,16 @@
         Please be patient we’ll get back to you shortly.
     </div>
     <div class="section5">
-        <a href="">Go Back</a>
+        <a href="index.php">Go Back</a>
     </div>
     <footer>
         <div>
             <span>Travelx</span>
         </div>
         <div>
-            <a href="#">Visas</a>
-            <a href="#">Apply Now</a>
-            <a href="#">Check Application Status</a>
+            <a href="index.php#visas">Visas</a>
+            <a href="apply.php">Apply Now</a>
+            <a href="status.php">Check Application Status</a>
             <a href="#">Contact</a>
         </div>
         <div>

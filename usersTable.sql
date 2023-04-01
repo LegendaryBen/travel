@@ -22,5 +22,6 @@ create table Users(
     `application id` varchar(200),
     `document url` varchar(200),
     `service agent` varchar(200),
+    `email` varchar(200),
     primary key (id)
 );

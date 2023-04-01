@@ -51,16 +51,16 @@ else{
         </div>
         <div class="clicks">
             <div>
-                <a href="#">Home</a>
+                <a href="index.php">Home</a>
             </div>
             <div>
-                <a href="#">Visas</a>
+                <a href="index.php#visas">Visas</a>
             </div>
             <div>
-                <a href="#">Application Status</a>
+                <a href="status.php">Application Status</a>
             </div>
             <div>
-                <a href="#">About Us</a>
+                <a href="about.php">About Us</a>
             </div>
             <div>
                 <a href="#">Contact</a>
@@ -72,19 +72,19 @@ else{
     </div>
     <header>
         <div class="first">
-            <a href="#">
+            <a href="index.php">
                 <img src="images/logo.svg" alt="" class="log">
                 <div>Travel x</div>
             </a>
         </div>
         <div class="second">
-            <a href="#">Home</a>
-            <a href="#">Visas</a>
-            <a href="#">
+            <a href="index.php">Home</a>
+            <a href="index.php#visas">Visas</a>
+            <a href="status.php">
                 <div>Application</div>
                 <div>Status</div>
             </a>
-            <a href="#">About Us</a>
+            <a href="about.php">About Us</a>
             <a href="#">Contact</a>
         </div>
         <div>
@@ -201,6 +201,10 @@ else{
                             <input type="text" name="expiry_date" id="" placeholder="MM / YY" class="expire" value="<?php echo $result2[0]['expiry date'];?>">
                         </div>
                         <div class="divs">
+                            <label>email</label><br><br>
+                            <input type="text" name="email" id="" placeholder="e.g mrjohndoe@gmail.com" class="occupation" value="<?php echo $result2[0]['email'];?>">
+                        </div>
+                        <div class="divs">
                             <label>Country of choice</label><br><br>
                             <input type="text" name="country_of_choice" id="" placeholder="e.g Germany" class="choice" value="<?php echo $result2[0]['country of choice'];?>">
                         </div>
@@ -230,9 +234,9 @@ else{
             <span>Travelx</span>
         </div>
         <div>
-            <a href="#">Visas</a>
-            <a href="#">Apply Now</a>
-            <a href="#">Check Application Status</a>
+            <a href="index.php">Visas</a>
+            <a>Apply Now</a>
+            <a href="status">Check Application Status</a>
             <a href="#">Contact</a>
         </div>
         <div>

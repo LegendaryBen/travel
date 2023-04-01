@@ -19,16 +19,16 @@
         </div>
         <div class="clicks">
             <div>
-                <a href="#">Home</a>
+                <a href="index.php">Home</a>
             </div>
             <div>
-                <a href="#">Visas</a>
+                <a href="index.php#visas">Visas</a>
             </div>
             <div>
-                <a href="#">Application Status</a>
+                <a href="status.php">Application Status</a>
             </div>
             <div>
-                <a href="#">About Us</a>
+                <a href="about.php">About Us</a>
             </div>
             <div>
                 <a href="#">Contact</a>
@@ -40,19 +40,19 @@
     </div>
     <header>
         <div class="first">
-            <a href="#">
+            <a href="index.php">
                 <img src="images/logo.svg" alt="" class="log">
                 <div>Travel x</div>
             </a>
         </div>
         <div class="second">
-            <a href="#">Home</a>
-            <a href="#">Visas</a>
-            <a href="#">
+            <a href="index.php">Home</a>
+            <a href="index.php#visas">Visas</a>
+            <a href="status.php">
                 <div>Application</div>
                 <div>Status</div>
             </a>
-            <a href="#">About Us</a>
+            <a href="about.php">About Us</a>
             <a href="#">Contact</a>
         </div>
         <div>
@@ -114,6 +114,10 @@
                         <div class="divs">
                             <label>Phone number</label><br><br>
                             <input type="text" name="phone" id="" placeholder="Phone number" class="phone">
+                        </div>
+                        <div class="divs">
+                            <label>Email</label><br><br>
+                            <input type="email" name="email" id="" placeholder="e.g mrjohn098@gmail.com">
                         </div>
                     </div>
                     <div class="form-first2">
@@ -217,9 +221,9 @@
             <span>Travelx</span>
         </div>
         <div>
-            <a href="#">Visas</a>
-            <a href="#">Apply Now</a>
-            <a href="#">Check Application Status</a>
+            <a href="index.php">Visas</a>
+            <a>Apply Now</a>
+            <a href="status.php">Check Application Status</a>
             <a href="#">Contact</a>
         </div>
         <div>

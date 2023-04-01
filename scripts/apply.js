@@ -93,11 +93,11 @@ function showDocs(){
 
 function changeImg(e){
     let obj = e.target.files[0];
-    if(obj.type == "image/jpeg"){
+    if(obj.type == "image/jpeg" || obj.type == "image/jpg" || obj.typ == "image/png"){
         preview.src = URL.createObjectURL(obj);
         img.style.opacity = "1";
     }else{
-        alert("FILE NOT SUPPORTED!!!. SELECT A JPEG  IMAGE FILE")
+        alert("FILE NOT SUPPORTED!!!. SELECT A JPEG, JPG OR PNG  IMAGE FILE")
         img.style.opacity = "0";
     }
 }

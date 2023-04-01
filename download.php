@@ -7,7 +7,7 @@ if(isset($_GET['check'])){
     header("Content-type:application/force-download");
     header("Content-Disposition:attachment; filename=\"$file3\"");
     readfile($path);
-
+    header("location:user_dashboard_travel_x.php");
 }else{
     header("location:user_dashboard_travel_x.php");
 }

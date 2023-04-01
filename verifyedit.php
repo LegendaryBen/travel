@@ -23,13 +23,14 @@ if(isset($_POST['submit'])){
         $expiry =  htmlentities(trim($_POST['expiry_date']));
         $country_of_choice =htmlentities(trim( $_POST['country_of_choice']));
         $service_agent = "George Dennis";
+        $emails =  htmlentities($_POST['email']);
     
-        if(empty($first_name)||empty($last_name)||empty($nationality)||empty($dob)||empty($lang)||empty($phone)||empty($cor)||empty($sex)||empty($marital)||empty($occupation)||empty($visa)||empty($passport_number)||empty($issue_date)||empty($country_of_issue)||empty($expiry)||empty($country_of_choice)||empty($id)){
+        if(empty($first_name)||empty($last_name)||empty($nationality)||empty($dob)||empty($lang)||empty($phone)||empty($cor)||empty($sex)||empty($marital)||empty($occupation)||empty($visa)||empty($passport_number)||empty($issue_date)||empty($country_of_issue)||empty($expiry)||empty($country_of_choice)||empty($id)||empty($emails)){
             header("location:edit.php?error=some inputs fields are empty, check properly!&&nums=$id");
             exit;
         }else{
             
-            $sql = "update users set `first_name` = ?,`last_name`= ?,`nationality` = ?,`date_of_birth`=?,`language`=?,`phone`=?,`country of residence`=?,`sex`=?,`marital status`=?,`visa type`=?,`passport number`=?,`issue date`=?,`country of issue`=?,`expiry date`=?,`country of choice`=?,`occupation`=? where `id` = ?";
+            $sql = "update users set `first_name` = ?,`last_name`= ?,`nationality` = ?,`date_of_birth`=?,`language`=?,`phone`=?,`country of residence`=?,`sex`=?,`marital status`=?,`visa type`=?,`passport number`=?,`issue date`=?,`country of issue`=?,`expiry date`=?,`country of choice`=?,`occupation`=?,`email`=? where `id` = ?";
     
             $stm = mysqli_prepare($connection,$sql);
 
@@ -38,7 +39,7 @@ if(isset($_POST['submit'])){
                 exit;
             }
       
-            mysqli_stmt_bind_param($stm,"ssssssssssssssssi",$first_name,$last_name,$nationality,$dob,$lang,$phone,$cor,$sex,$marital,$visa,$passport_number,$issue_date,$country_of_issue,$expiry,$country_of_choice,$occupation,$id);
+            mysqli_stmt_bind_param($stm,"sssssssssssssssssi",$first_name,$last_name,$nationality,$dob,$lang,$phone,$cor,$sex,$marital,$visa,$passport_number,$issue_date,$country_of_issue,$expiry,$country_of_choice,$occupation,$emails,$id);
 
             $final = mysqli_stmt_execute($stm);
                 

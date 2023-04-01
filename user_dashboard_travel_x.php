@@ -207,6 +207,9 @@ $result2 =  mysqli_fetch_all($final2,MYSQLI_ASSOC);
 
      </div>
    </div>
+   <div class="mob">
+     You cannot access this page from mobile devices
+   </div>
    <script src="scripts/dashboard.js"></script>
 
    <script>
